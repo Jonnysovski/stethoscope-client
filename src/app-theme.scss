@@ -1,0 +1,23 @@
+@import "~angular2-mdl/scss/color-definitions";
+
+$color-primary: $color-white;
+$color-primary-dark: $palette-blue-700;
+$color-accent: $palette-amber-A200;
+$color-primary-contrast: $color-dark-contrast;
+$color-accent-contrast: $color-dark-contrast;
+
+$layout-text-color: black;
+$layout-header-text-color: black;
+$layout-content-bg-color: #e7eeef;
+
+$box-shadow-color: #213a44;
+
+$text-color: black;
+
+$search-bar-bg-color: #e7eeef;
+
+$alerts-bg-color: #fff;
+
+$padding: 16px;
+
+@import '~angular2-mdl/scss/material-design-lite';

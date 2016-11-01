@@ -1,0 +1,29 @@
+@import "../../app-theme";
+
+$search-bar-border-radius: 25px;
+$search-bar-width: 200px;
+
+.search-bar {
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.24);
+    display: flex;
+    flex-direction: row;
+    background: $search-bar-bg-color;
+    border-radius: $search-bar-border-radius;
+    width: $search-bar-width;
+    padding: 0 $padding;
+
+    input {
+        flex: 1 0 0;
+        background: transparent;
+        border: none;
+        line-height: 30px;
+        outline: none;
+    }
+
+    mdl-icon {
+        font-size: 20px;
+        margin: auto;
+        color: rgba(0,0,0,0.28);
+        cursor: pointer;
+    }
+}

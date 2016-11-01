@@ -1,3 +1,32 @@
-<h1>
-  {{title}}
-</h1>
+<div class="demo-container" mdl-shadow="2">
+	<mdl-layout mdl-layout-fixed-header>
+		<mdl-layout-header>
+			<mdl-layout-header-row>
+				<mdl-layout-title>
+					<img class="app-logo" src="assets/icons/Mod.png"></mdl-layout-title>
+				{{ clock | async | date:'dd MMM yyyy , HH:mm'}}
+				<mdl-layout-spacer></mdl-layout-spacer> 
+				<search-bar></search-bar>
+        <mdl-layout-spacer></mdl-layout-spacer> 
+				<!-- Navigation. We hide it in small screens. -->
+				<nav class="mdl-navigation mdl-layout--large-screen-only">
+					<a class="mdl-navigation__link">
+						<img src="assets/icons/lehava.png"> {{'open_lehava_incident' | i18n}}
+					</a>
+					<a class="mdl-navigation__link"><img src="assets/icons/logout.png"></a>
+				</nav>
+			</mdl-layout-header-row>
+		</mdl-layout-header>
+		<mdl-layout-drawer>
+			<mdl-layout-title>Title</mdl-layout-title>
+			<nav class="mdl-navigation">
+				<a class="mdl-navigation__link">Link</a>
+				<a class="mdl-navigation__link">Link</a>
+				<a class="mdl-navigation__link">Link</a>
+			</nav>
+		</mdl-layout-drawer>
+		<mdl-layout-content>
+			<alerts></alerts>
+		</mdl-layout-content>
+	</mdl-layout>
+</div>
