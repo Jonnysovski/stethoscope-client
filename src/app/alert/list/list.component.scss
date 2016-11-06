@@ -1,0 +1,22 @@
+@import '../../../app-theme';
+
+.list-container {
+    @include padding();
+
+    .mdl-data-table {
+        width: 100%;
+        border: none;
+
+        th {
+            border-top: 1px solid;
+            border-bottom: 1px solid;
+            padding-top: 12px !important;
+            padding-bottom: 12px !important;
+        }
+
+        td {
+            border-top: 1px solid #e7eeef !important;
+            border-bottom: 1px solid #e7eeef !important;
+        }
+    }
+}
