@@ -1,5 +1,7 @@
 @import "../../app-theme";
 
 .alerts-container {
-    background: $alerts-bg-color
+    background: $alerts-bg-color;
+    box-shadow: 2px 2px 2.3px rgba(33, 58, 68, 0.2), -1px 1px 2.3px rgba(33, 58, 68, 0.2);
+    border-radius: 2px;
 }

@@ -8,4 +8,5 @@ export class Alert {
     public lastConnectionDate: Date;
     public lastUpdate: Date;
     public lastModifier: string;
+    public priority: boolean;
 }

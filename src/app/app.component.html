@@ -4,7 +4,7 @@
 			<mdl-layout-header-row>
 				<mdl-layout-title>
 					<img class="app-logo" src="assets/icons/Mod.png"></mdl-layout-title>
-				{{ clock | async | date:'dd MMM yyyy , HH:mm'}}
+				{{ clock | async | date:'dd.MM.yyyy , HH:mm' | i18n}}
 				<mdl-layout-spacer></mdl-layout-spacer> 
 				<search-bar></search-bar>
         <mdl-layout-spacer></mdl-layout-spacer> 
