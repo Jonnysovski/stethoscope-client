@@ -1,5 +1,13 @@
 @import "./app-theme.scss";
 
+body { 
+    @include roboto-font();
+}
+
 mdl-layout-content {
     background: $layout-content-bg-color;
+}
+
+button {
+    color: $text-color !important;
 }

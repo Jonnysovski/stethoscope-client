@@ -1,0 +1,9 @@
+<div class="statistics-counter-container" layout="row">
+	<div class="text-container" layout="row" flex grow="3">
+		<div class="title" flex grow="2">{{ title }}</div>
+		<div class="last-update" flex>{{ lastUpdate | date: 'dd/MM/yyyy hh:mm:ss'}}</div>
+	</div>
+    <div class="number-container" flex>
+        {{ amount }}
+    </div>
+</div>

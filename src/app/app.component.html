@@ -5,9 +5,9 @@
 				<mdl-layout-title>
 					<img class="app-logo" src="assets/icons/Mod.png"></mdl-layout-title>
 				{{ clock | async | date:'dd.MM.yyyy , HH:mm' | i18n}}
-				<mdl-layout-spacer></mdl-layout-spacer> 
+				<mdl-layout-spacer></mdl-layout-spacer>
 				<search-bar></search-bar>
-        <mdl-layout-spacer></mdl-layout-spacer> 
+				<mdl-layout-spacer></mdl-layout-spacer>
 				<!-- Navigation. We hide it in small screens. -->
 				<nav class="mdl-navigation mdl-layout--large-screen-only">
 					<a class="mdl-navigation__link">
@@ -25,8 +25,8 @@
 				<a class="mdl-navigation__link">Link</a>
 			</nav>
 		</mdl-layout-drawer>
-		<mdl-layout-content>
-			<alerts></alerts>
+		<mdl-layout-content layout="column">
+			<router-outlet></router-outlet>
 		</mdl-layout-content>
 	</mdl-layout>
 </div>

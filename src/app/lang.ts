@@ -68,6 +68,18 @@ export default {
         'free_description': {
             en: 'Free description',
             he: 'תיאור חופשי'
+        },
+        'total_active_devices': {
+            en: 'Total active devices',
+            he: 'סה"כ מכשירים פעילים'
+        },
+        'total_critical_alerts': {
+            en: 'Total critical alerts',
+            he: 'סה"כ תקלות חמורות'
+        },
+        'search': {
+            en: 'Search',
+            he: 'חיפוש'
         }
     }
 };

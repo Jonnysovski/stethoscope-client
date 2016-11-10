@@ -8,6 +8,7 @@ import { Observable } from 'rxjs/Rx';
 })
 export class AppComponent {
   public clock;
+  public date = new Date();
 
   constructor() {
     this.clock = Observable.interval(1000).map(() => new Date());

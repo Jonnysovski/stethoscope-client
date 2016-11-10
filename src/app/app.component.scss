@@ -5,3 +5,24 @@
 mdl-layout-content {
     padding: 45px 15%;
 }
+
+/* Large or below */
+@media (max-width: 1199px) {
+     mdl-layout-content {
+        padding: 45px 10%;
+    }
+}
+
+/* Medium or below */
+@media (max-width: 991px) {
+    mdl-layout-content {
+        padding: 45px 5%;
+    }
+}
+
+/* Small or below */
+@media (max-width: 767px) {
+    mdl-layout-content {
+        padding: 45px 2%;
+    }
+}

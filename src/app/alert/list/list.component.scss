@@ -19,4 +19,32 @@
             border-bottom: 1px solid #e7eeef !important;
         }
     }
+
+    .table-container {
+        text-align: center;
+
+        .table-header{
+           
+            .header {
+                border-bottom: 1px solid rgba(0,0,0,0.34);
+                border-top: 1px solid rgba(0,0,0,0.34);
+                font-size: 16px;
+                padding: $padding 0;
+            }
+        }
+
+        .table-content {
+
+            .row {
+
+                .cell {
+                    padding: ($padding - 2) 0;
+                }
+            }
+
+            .row:not(:last-child) {
+                border-bottom: 1px solid $layout-content-bg-color;
+            }
+        }
+    }
 }

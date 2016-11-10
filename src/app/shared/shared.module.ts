@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { MdlModule } from 'angular2-mdl';
 import { I18nService, I18nPipe } from 'angular2-i18n';
 
+import { FlexDirective } from './layout/flex.directive';
+import { LayoutDirective } from './layout/layout.directive';
+
 import lang from '../lang';
 
 @NgModule({
@@ -12,10 +15,14 @@ import lang from '../lang';
     ],
     exports: [
         MdlModule,
-        I18nPipe
+        I18nPipe,
+        LayoutDirective,
+        FlexDirective
     ],
     declarations: [
-        I18nPipe
+        I18nPipe,
+        FlexDirective,
+        LayoutDirective
     ],
     providers: [
         I18nService

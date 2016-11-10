@@ -1,0 +1,30 @@
+@import "../../../app-theme";
+
+.statistics-counter-container {
+    background: $container-bg-color;
+    margin: 16px 0;
+    border-radius: 2px;
+
+    .text-container {
+        padding: 20px $padding;
+
+        .title {
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+        .last-update {
+            color: rgba(0,0,0,0.44);
+        }
+    }
+
+    .number-container {
+        background: $contrast-bg-color;
+        color: $contrast-text-color;
+        font-size: 40px;
+        font-weight: 200;
+        padding: 30px 16px;
+        text-align: center;
+    }
+    @include box-shadow();
+}

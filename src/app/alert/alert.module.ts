@@ -9,6 +9,7 @@ import { AlertsComponent } from './alerts.component';
 import { AlertListComponent } from './list/list.component';
 import { AlertListFilterComponent } from './list/filter/filter.component';
 
+
 @NgModule({
     imports: [
         CommonModule,

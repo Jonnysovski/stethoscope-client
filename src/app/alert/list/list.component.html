@@ -1,33 +1,34 @@
 <div class="list-container">
-    <alert-list-filter></alert-list-filter>
-	<table class="mdl-data-table mdl-js-data-table">
-		<thead>
-			<tr>
-				<th class="mdl-data-table__cell--non-numeric">{{'incident_type' | i18n}}</th>
-				<th>{{'incident_number' | i18n}}</th>
-				<th class="mdl-data-table__cell--non-numeric">{{'computer_name' | i18n}}</th>
-				<th class="mdl-data-table__cell--non-numeric hidden-xs-down">{{'username' | i18n}}</th>
-				<th class="mdl-data-table__cell--non-numeric hidden-sm-down">{{'last_connection_date' | i18n}}</th>
-				<th class="mdl-data-table__cell--non-numeric hidden-md-down">{{'last_update' | i18n}}</th>
-				<th class="mdl-data-table__cell--non-numeric hidden-lg-down">{{'last_modifier' | i18n}}</th>
-				<th></th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr *ngFor="let alert of alerts">
-				<td class="mdl-data-table__cell--non-numeric">{{alert.type}}</td>
-				<td class>{{alert.incidentNumber}}</td>
-				<td class="mdl-data-table__cell--non-numeric">{{alert.computerName}}</td>
-				<td class="mdl-data-table__cell--non-numeric hidden-xs-down">{{alert.userName}}</td>
-				<td class="mdl-data-table__cell--non-numeric hidden-sm-down">{{alert.lastConnectionDate | date : 'dd/MM/yy | hh:mm'}}</td>
-				<td class="mdl-data-table__cell--non-numeric hidden-md-down">{{alert.lastUpdate | date : 'dd/MM/yy | hh:mm'}}</td>
-				<td class="mdl-data-table__cell--non-numeric hidden-lg-down">{{alert.lastModifier}}</td>
-				
-                <td [ngSwitch]="alert.priority">
-                    <img *ngSwitchCase="true" src="assets/icons/star_full.png"/>
-                    <img *ngSwitchCase="false" src="assets/icons/star_empty.png"/>
-                </td>
-			</tr>
-		</tbody>
-	</table>
+	<alert-list-filter></alert-list-filter>
+
+	<div class="table-container" layout="column">
+		<section class="table-header" layout="row">
+			<div class="header" flex></div>
+			<div class="header" flex grow="5">{{'incident_type' | i18n}}</div>
+			<div class="header" flex grow="5">{{'incident_number' | i18n}}</div>
+			<div class="header" flex grow="5">{{'computer_name' | i18n}}</div>
+			<div class="header" flex grow="5">{{'username' | i18n}}</div>
+			<div class="header" flex grow="5">{{'last_connection_date' | i18n}}</div>
+			<div class="header" flex grow="5">{{'last_update' | i18n}}</div>
+			<div class="header" flex grow="5">{{'last_modifier' | i18n}}</div>
+			<div class="header" flex></div>
+
+		</section>
+		<section class="table-content" layout="column">
+			<div class="row" *ngFor="let alert of alerts" layout="row">
+				<div class="cell" flex></div>
+				<div class="cell" flex grow="5">{{alert.type}}</div>
+				<div class="cell" flex grow="5">{{alert.incidentNumber}}</div>
+				<div class="cell" flex grow="5">{{alert.computerName}}</div>
+				<div class="cell" flex grow="5">{{alert.userName}}</div>
+				<div class="cell" flex grow="5">{{alert.lastConnectionDate | date : 'dd/MM/yy | hh:mm'}}</div>
+				<div class="cell" flex grow="5">{{alert.lastUpdate | date : 'dd/MM/yy | hh:mm' }}</div>
+				<div class="cell" flex grow="5">{{alert.lastModifier}}</div>
+				<div class="cell" flex [ngSwitch]="alert.priority">
+					<img *ngSwitchCase="true" src="assets/icons/star_full.png" />
+					<img *ngSwitchCase="false" src="assets/icons/star_empty.png" />
+				</div>
+			</div>
+		</section>
+	</div>
 </div>
