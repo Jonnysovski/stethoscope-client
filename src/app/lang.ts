@@ -80,6 +80,22 @@ export default {
         'search': {
             en: 'Search',
             he: 'חיפוש'
+        },
+        'domain': {
+            en: 'Domain',
+            he: 'דומיין'
+        },
+        'MAC': {
+            en: 'MAC',
+            he: 'MAC'
+        },
+        'operation_system': {
+            en: 'Operation System',
+            he: 'מערכת הפעלה'
+        },
+        'workstation_name': {
+            en: 'Workstation name',
+            he: 'שם עמדה'
         }
     }
 };

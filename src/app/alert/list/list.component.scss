@@ -36,10 +36,13 @@
         .table-content {
 
             .row {
-
                 .cell {
                     padding: ($padding - 2) 0;
                 }
+            }
+
+            .row:hover {
+                background: $layout-content-bg-color;
             }
 
             .row:not(:last-child) {

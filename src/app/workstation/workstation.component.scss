@@ -1,0 +1,7 @@
+@import "../../app-theme";
+
+.workstation-container {
+    .workstation-alerts {
+        @include card-background();
+    }
+}

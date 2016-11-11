@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'alert-list-filter',
     templateUrl: 'filter.component.html',
     styleUrls: ['filter.component.scss']
 })
-export class AlertListFilterComponent implements OnInit {
-    constructor() { }
+export class AlertListFilterComponent {
+    @Input('isWorkstation') isWorkstation: boolean;
 
-    ngOnInit() { }
+    constructor() { }
 }

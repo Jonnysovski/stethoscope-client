@@ -17,7 +17,9 @@ import { AlertListFilterComponent } from './list/filter/filter.component';
         SharedModule
     ],
     exports: [
-        AlertsComponent
+        AlertsComponent,
+        AlertListComponent,
+        AlertListFilterComponent
     ],
     declarations: [
         AlertsComponent,

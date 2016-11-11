@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Alert } from '../alert';
 import { AlertService } from '../alert.service';
 
@@ -8,6 +8,7 @@ import { AlertService } from '../alert.service';
     styleUrls: ['list.component.scss']
 })
 export class AlertListComponent implements OnInit {
+    @Input('isWorkstation') isWorkstation: boolean;
     public alerts: Alert[];
 
     constructor(private _alertService: AlertService) { }

@@ -1,4 +1,4 @@
 <div class="search-bar" layout="row">
-  <input flex type="text" placeholder="{{'search_workstation' | i18n}}"/>
-   <mdl-icon>search</mdl-icon>
+  <input flex type="text" maxlength="25" [(ngModel)]="searchTerm" (keydown.enter)="searchWorkstation()" placeholder="{{'search_workstation' | i18n}}"/>
+   <mdl-icon (click)="searchWorkstation()">search</mdl-icon>
 </div>

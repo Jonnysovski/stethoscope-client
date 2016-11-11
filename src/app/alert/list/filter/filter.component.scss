@@ -3,6 +3,10 @@
 .filter-container {
     @include padding();
 
+    h5 {
+        margin-top: 0 !important;
+    }
+
     .search-fields {
 
         button {

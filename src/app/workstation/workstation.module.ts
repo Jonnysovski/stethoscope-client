@@ -6,6 +6,7 @@ import { AlertModule } from '../alert/alert.module';
 
 
 import { WorkstationComponent } from './workstation.component';
+import { WorkstationDetailsComponent } from './details/details.component';
 
 @NgModule({
     imports: [
@@ -14,10 +15,12 @@ import { WorkstationComponent } from './workstation.component';
         AlertModule
     ],
     exports: [
-        WorkstationComponent
+        WorkstationComponent,
+        WorkstationDetailsComponent
     ],
     declarations: [
-        WorkstationComponent
+        WorkstationComponent,
+        WorkstationDetailsComponent
     ],
     providers: [],
 })

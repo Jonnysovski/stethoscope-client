@@ -1,7 +1,7 @@
 <div class="filter-container">
 	<h5>{{'filter' | i18n}}</h5>
 	<section class="search-fields" layout="row" flexWrap="wrap">
-		<div class="search-input" flex="20" layout="column">
+		<div class="search-input" *ngIf="!isWorkstation" flex="20" layout="column">
 			<label for="computer_name">{{'computer_name' | i18n}}</label>
 			<input id="computer_name" type="text" />
 		</div>
@@ -9,11 +9,11 @@
 			<label for="username">{{'username' | i18n}}</label>
 			<input id="username" type="text" />
 		</div>
-		<div class="search-input" flex="20" layout="column">
+		<div class="search-input" *ngIf="!isWorkstation" flex="20" layout="column">
 			<label for="ip_address">{{'ip_address' | i18n}}</label>
 			<input id="ip_address" type="text" />
 		</div>
-		<div class="search-input" flex="20" layout="column">
+		<div class="search-input" *ngIf="!isWorkstation" flex="20" layout="column">
 			<label for="mac_address">{{'mac_address' | i18n}}</label>
 			<input id="mac_address" type="text" />
 		</div>

@@ -1,0 +1,33 @@
+@import "../../../app-theme";
+
+
+.workstation-details-container {
+    @include card-background();
+
+    margin: 24px 0;
+    
+    .basic-information {
+        @include padding();
+
+        h5 {
+            font-weight: 700;
+        } 
+    }
+    
+    .extra-information {
+        @include padding();
+
+        background: $contrast-bg-color;
+        color: $contrast-text-color;
+    }
+
+    dl {
+        dd {
+            margin: 0;
+        }
+
+        dt {
+            color: unquote("rgb(#{$color-primary})") !important;
+        }
+    }
+}
