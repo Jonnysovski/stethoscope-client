@@ -18,6 +18,9 @@
       "prefix": "app",
       "mobile": false,
       "styles": [
+        "fonts/material-icons.scss",
+        "fonts/fonts.scss",
+        "material.css",
         "styles.scss",
         "app-theme.scss",
         "hide-media.scss"
