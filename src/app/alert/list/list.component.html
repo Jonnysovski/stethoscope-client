@@ -17,12 +17,12 @@
 		<section class="table-content" layout="column">
 			<div class="row" *ngFor="let alert of alerts" layout="row">
 				<div class="cell" flex></div>
-				<div class="cell" flex grow="5">{{alert.type}}</div>
-				<div class="cell" flex grow="5">{{alert.incidentNumber}}</div>
-				<div class="cell" flex grow="5">{{alert.computerName}}</div>
+				<div class="cell" flex grow="5">{{alert.description}}</div>
+				<div class="cell" flex grow="5">{{alert.triggerid}}</div>
+				<div class="cell" flex grow="5">{{alert.host.name}}</div>
 				<div class="cell" flex grow="5">{{alert.userName}}</div>
 				<div class="cell" flex grow="5">{{alert.lastConnectionDate | date : 'dd/MM/yy | hh:mm'}}</div>
-				<div class="cell" flex grow="5">{{alert.lastUpdate | date : 'dd/MM/yy | hh:mm' }}</div>
+				<div class="cell" flex grow="5">{{alert.lastchange | date : 'dd/MM/yy | hh:mm' }}</div>
 				<div class="cell" flex grow="5">{{alert.lastModifier}}</div>
 				<div class="cell" flex [ngSwitch]="alert.priority">
 					<img *ngSwitchCase="true" src="assets/icons/star_full.png" />

@@ -1,59 +1,33 @@
 import { Injectable } from '@angular/core';
+import { Http, Response, Headers, URLSearchParams } from '@angular/http';
+import { Observable } from 'rxjs/Rx';
+
+// Import RxJs required methods
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
 
 import { Alert } from './alert';
 @Injectable()
 export class AlertService {
+
+    private _alertsUrl = 'http://localhost/api/trigger';
     public alerts: Alert[];
 
-    constructor() { }
+    constructor(private _http: Http) { }
 
-    getAlerts(): Alert[] {
-        return [
-            {
-                computerName: 'PTZ 23140',
-                incidentNumber: 1020302,
-                ipAddress: '127.0.0.1',
-                lastConnectionDate: new Date(),
-                lastModifier: 'רון בוריסובסקי',
-                lastUpdate: new Date(),
-                macAddress: 'AB:00:CD:00:EF:00',
-                type: 'מסך כחול',
-                userName: 'מש"ק מערך',
-                priority: true
-            }, {
-                computerName: 'PTZ 23140',
-                incidentNumber: 1020302,
-                ipAddress: '127.0.0.1',
-                lastConnectionDate: new Date(),
-                lastModifier: 'רון בוריסובסקי',
-                lastUpdate: new Date(),
-                macAddress: 'AB:00:CD:00:EF:00',
-                type: 'מסך כחול',
-                userName: 'מש"ק מערך',
-                priority: false
-            }, {
-                computerName: 'PTZ 23140',
-                incidentNumber: 1020302,
-                ipAddress: '127.0.0.1',
-                lastConnectionDate: new Date(),
-                lastModifier: 'רון בוריסובסקי',
-                lastUpdate: new Date(),
-                macAddress: 'AB:00:CD:00:EF:00',
-                type: 'מסך כחול',
-                userName: 'מש"ק מערך',
-                priority: true
-            }, {
-                computerName: 'PTZ 23140',
-                incidentNumber: 1020302,
-                ipAddress: '127.0.0.1',
-                lastConnectionDate: new Date(),
-                lastModifier: 'רון בוריסובסקי',
-                lastUpdate: new Date(),
-                macAddress: 'AB:00:CD:00:EF:00',
-                type: 'מסך כחול',
-                userName: 'מש"ק מערך',
-                priority: false
-            }
-        ];
+    getAlerts(): Observable<Alert[]> {
+
+        return this._http.get(this._alertsUrl)
+            .map((res: Response) => {
+                let response = res.json();
+                response.forEach((item) => {
+                    item.group = item.groups[0];
+                    item.host = item.hosts[0];
+                    item.lastchange = new Date(item.lastchange * 1000);
+                });
+                console.log(response);
+                return response;
+            })
+            .catch((error: any) => Observable.throw(error.json().error || 'Server Error'));
     }
 }

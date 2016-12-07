@@ -14,6 +14,10 @@ export class AlertListComponent implements OnInit {
     constructor(private _alertService: AlertService) { }
 
     ngOnInit() {
-        this.alerts = this._alertService.getAlerts();
+        this._alertService.getAlerts().subscribe((alerts: Alert[]) => {
+            this.alerts = alerts;
+        }, (err) => {
+            console.error(err);
+        });
     }
 }
