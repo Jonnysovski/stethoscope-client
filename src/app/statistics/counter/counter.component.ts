@@ -9,6 +9,7 @@ export class StatisticsCounterComponent {
     @Input('title') title: string;
     @Input('lastUpdate') lastUpdate: Date;
     @Input('amount') amount: number;
+    @Input('type') type: string;
     
     constructor() { }
 

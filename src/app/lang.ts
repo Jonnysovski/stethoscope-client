@@ -96,6 +96,22 @@ export default {
         'workstation_name': {
             en: 'Workstation name',
             he: 'שם עמדה'
+        },
+        'there are currently': {
+            en: 'There are currently',
+            he: 'קיימות כרגע'
+        },
+        'common system faults': {
+            en: 'common faults in the system',
+            he: 'תקלות נפוצות במערכת'
+        },
+        'there are currently no common system faults': {
+            en: 'There are currently no common fualts in the system',
+            he: 'כרגע לא קיימות תקלות נפוצות במערכת'
+        },
+        'view statistics': {
+            en: 'View statistics',
+            he: 'לצפייה בנתונים הסטטיסטיים'
         }
     }
 };

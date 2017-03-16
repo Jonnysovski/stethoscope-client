@@ -1,0 +1,14 @@
+<div class='alerts-sum'>
+    <div *ngIf='isThereAlerts()'>
+        <h4>{{'there are currently' | i18n }} {{alerts.length}} {{'common system faults' | i18n}}</h4>
+    </div>
+
+    <div *ngIf='!isThereAlerts()'>
+        <h4>{{'there are currently no common system faults' | i18n}}</h4>
+    </div>
+
+    <div class='goto-statistics-btn'>
+        <h5> {{'view statistics' | i18n}} </h5>
+        <a md-mini-fab color="primary"><md-icon>keyboard_arrow_left</md-icon></a>
+    </div>
+</div>
