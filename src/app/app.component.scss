@@ -1,28 +1,45 @@
+@import '../app-theme';
+
 .app-logo {
     transform: scale(0.7);
 }
 
-mdl-layout-content {
+.content {
     padding: 45px 15%;
+    height: 100%;
+    display: flex;
+    background: $layout-content-bg-color;
 }
 
 /* Large or below */
 @media (max-width: 1199px) {
-     mdl-layout-content {
+     .content {
         padding: 45px 10%;
     }
 }
 
 /* Medium or below */
 @media (max-width: 991px) {
-    mdl-layout-content {
+    .content {
         padding: 45px 5%;
     }
 }
 
 /* Small or below */
 @media (max-width: 767px) {
-    mdl-layout-content {
+    .content {
         padding: 45px 2%;
     }
+}
+
+search-bar {
+    margin: auto;
+}
+
+.navigation-link {
+    margin-right: 2% 
+}
+
+.page-view {
+    margin: auto;
 }
