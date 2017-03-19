@@ -1,19 +1,20 @@
 <alerts-header></alerts-header>
 <div class="alerts-container">
 	<md-tab-group>
-		<md-tab class="tab-lable" label="{{'all' | i18n}}">
+		<md-tab *ngIf="alerts" class="tab-lable" label="{{'all' | i18n}} ({{alerts.length}})">
 			<alerts-list></alerts-list>
 		</md-tab>
-		<md-tab class="tab-lable" label="{{'general_incidents' | i18n}}">
+		<md-tab class="tab-lable" label="{{'general_incidents' | i18n}} ()">
 			<alerts-list></alerts-list>
 		</md-tab>
-		<md-tab class="tab-lable" label="{{'priority_incidents' | i18n}}">
+		<md-tab class="tab-lable" label="{{'priority_incidents' | i18n}} ()">
 			<alerts-list></alerts-list>
 		</md-tab>
-		<md-tab class="tab-lable" label="{{'updates_and_version' | i18n}}">
+		<md-tab class="tab-lable" label="{{'updates_and_version' | i18n}} ()">
 			<alerts-list></alerts-list>
 		</md-tab>
 	</md-tab-group>
+	
 
 </div>
 

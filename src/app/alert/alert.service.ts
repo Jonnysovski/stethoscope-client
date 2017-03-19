@@ -10,7 +10,7 @@ import { Alert } from './alert';
 @Injectable()
 export class AlertService {
 
-    private _alertsUrl = 'http://localhost/api/trigger';
+    private _alertsUrl = 'http://localhost:3000/api/trigger';
     public alerts: Alert[];
 
     constructor(private _http: Http) { }

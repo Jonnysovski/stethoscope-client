@@ -11,8 +11,8 @@ md-tab-group /deep/ .md-tab-label {
 }
 
 :host /deep/ {
-    .mat-tab-label{
-        color: green;
+    .mat-tab-label {
+        font-size: large !important;
         display: flex;
         flex: 1;
         flex-grow: 1;
