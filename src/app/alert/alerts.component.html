@@ -1,16 +1,20 @@
+<alerts-header></alerts-header>
 <div class="alerts-container">
-	<mdl-tabs mdl-ripple mdl-tab-active-index="0">
-		<mdl-tab-panel mdl-tab-panel-title="{{'all' | i18n}}">
+	<md-tab-group>
+		<md-tab *ngIf="alerts" class="tab-lable" label="{{'all' | i18n}} ({{alerts.length}})">
 			<alerts-list></alerts-list>
-		</mdl-tab-panel>
-		<mdl-tab-panel mdl-tab-panel-title="{{'general_incidents' | i18n}}">
+		</md-tab>
+		<md-tab class="tab-lable" label="{{'general_incidents' | i18n}} ()">
 			<alerts-list></alerts-list>
-		</mdl-tab-panel>
-		<mdl-tab-panel mdl-tab-panel-title="{{'priority_incidents' | i18n}}">
+		</md-tab>
+		<md-tab class="tab-lable" label="{{'priority_incidents' | i18n}} ()">
 			<alerts-list></alerts-list>
-		</mdl-tab-panel>
-		<mdl-tab-panel mdl-tab-panel-title="{{'updates_and_version' | i18n}}">
+		</md-tab>
+		<md-tab class="tab-lable" label="{{'updates_and_version' | i18n}} ()">
 			<alerts-list></alerts-list>
-		</mdl-tab-panel>
-	</mdl-tabs>
+		</md-tab>
+	</md-tab-group>
+	
+
 </div>
+

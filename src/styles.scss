@@ -1,11 +1,12 @@
 @import "./app-theme.scss";
 
-body { 
+body {
     @include roboto-font();
 }
 
-mdl-layout-content {
+.content {
     background: $layout-content-bg-color;
+    height: 100vh;
 }
 
 button {

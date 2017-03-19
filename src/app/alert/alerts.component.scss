@@ -3,3 +3,18 @@
 .alerts-container {
     @include card-background();
 }
+
+md-tab-group /deep/ .md-tab-label {
+    display: flex;
+    flex: 1;
+    flex-grow: 1;
+}
+
+:host /deep/ {
+    .mat-tab-label {
+        font-size: large !important;
+        display: flex;
+        flex: 1;
+        flex-grow: 1;
+    }
+}

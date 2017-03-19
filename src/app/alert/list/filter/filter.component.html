@@ -1,5 +1,5 @@
 <div class="filter-container">
-	<h5>{{'filter' | i18n}}</h5>
+	<h5>{{'search' | i18n}}</h5>
 	<section class="search-fields" layout="row" flexWrap="wrap">
 		<div class="search-input" *ngIf="!isWorkstation" flex="20" layout="column">
 			<label for="computer_name">{{'computer_name' | i18n}}</label>
@@ -21,13 +21,8 @@
 			<label for="free_description">{{'free_description' | i18n}}</label>
 			<input id="free_description" type="text" />
 		</div>
-		<!--<div class="search-input" flex="15" layout="column">
-			<toggle-button-group name="status" items="['test1', 'test2', 'test3']">
-				<toggle-button label></toggle-button>
-			</toggle-button-group>
 
-		</div>-->
-		<button mdl-button mdl-button-type="raised" mdl-colored="primary" mdl-ripple>
+		<button md-raised-button color="primary">
 			{{'search' | i18n}}
 		</button>
 	</section>

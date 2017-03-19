@@ -4,6 +4,14 @@
 		<div class="last-update" flex>{{ lastUpdate | date: 'dd/MM/yyyy hh:mm:ss'}}</div>
 	</div>
     <div class="number-container" flex>
-        {{ amount }}
+			<div *ngIf="type == 'alert'">
+				<span id="alert-number">
+					{{ amount }}
+					<img class="app-logo" src="../../../assets/icons/warning.png">
+				</span>
+			</div>
+			<div *ngIf="type != 'alert'">
+				{{ amount }}
+			</div>
     </div>
 </div>
