@@ -16,6 +16,7 @@ import { WorkstationModule } from './workstation/workstation.module';
 import { AppComponent } from './app.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 
+import 'hammerjs';
 
 @NgModule({
     declarations: [
