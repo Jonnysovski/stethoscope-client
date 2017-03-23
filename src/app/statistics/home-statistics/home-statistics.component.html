@@ -1,0 +1,56 @@
+<div class='home-statistics-view' [class.isclosed]="!viewStatistics">
+    <div class="alert-type-nav">
+        <!--<md-list>
+            <md-list-item *ngFor="let type of types; let i = index" >
+                <button md-icon-button md-list-avatar [class.active]='type === selectedType' color='primary' (click)='typeSelect($event, type, i)'>
+                    <md-icon>check</md-icon>
+                </button>
+                <p md-line>{{type | i18n}}</p>
+            </md-list-item>
+        </md-list>-->
+        <md-list>
+            <md-list-item>
+                <button md-icon-button md-list-avatar (click)='typeSelect(0)' [class.active]='types[0] === selectedType'>
+                    <img class="type-icon" src="../../../assets/icons/application.png">
+                </button>
+                <p md-line>{{types[0] | i18n}}</p>
+            </md-list-item>
+            <md-list-item>
+                <button md-icon-button md-list-avatar (click)='typeSelect(1)' [class.active]='types[1] === selectedType'>
+                    <img class="type-icon" src="../../../assets/icons/system.png">
+                </button>
+                <p md-line>{{types[1] | i18n}}</p>
+            </md-list-item>
+            <md-list-item>
+                <button md-icon-button md-list-avatar (click)='typeSelect(2)' [class.active]='types[2] === selectedType'>
+                    <img class="type-icon" src="../../../assets/icons/mail.png">
+                </button>
+                <p md-line>{{types[2] | i18n}}</p>
+            </md-list-item>
+            <md-list-item>
+                <button md-icon-button md-list-avatar (click)='typeSelect(3)' [class.active]='types[3] === selectedType'>
+                    <img class="type-icon" src="../../../assets/icons/network_drivers.png">
+                </button>
+                <p md-line>{{types[3] | i18n}}</p>
+            </md-list-item>
+            <md-list-item>
+                <button md-icon-button md-list-avatar (click)='typeSelect(4)' [class.active]='types[4] === selectedType'>
+                    <img class="type-icon" src="../../../assets/icons/network.png">
+                </button>
+                <p md-line>{{types[4] | i18n}}</p>
+            </md-list-item>
+            <md-list-item>
+                <button md-icon-button md-list-avatar (click)='typeSelect(5)' [class.active]='types[5] === selectedType'>
+                    <img class="type-icon" src="../../../assets/icons/hardware.png">
+                </button>
+                <p md-line>{{types[5] | i18n}}</p>
+            </md-list-item>
+        </md-list>
+    </div>
+    <app-barchart [alertType]="selectedType"></app-barchart>
+    
+</div>
+<div class='to-full-statistics'>
+    
+    <button md-button> <md-icon>insert_chart</md-icon> {{'Show full statistics' | i18n}}</button>
+</div>

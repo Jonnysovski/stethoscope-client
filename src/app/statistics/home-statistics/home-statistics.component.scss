@@ -1,0 +1,26 @@
+@import "../../../app-theme.scss";
+
+.home-statistics-view {
+    display: flex;
+    div, app-barchart {
+        flex-grow: 1;
+    }
+    // md-list {
+    //     display: flex;
+    // }
+    button.active {
+        background-color: #69f0ae;
+    }
+    .type-icon {
+        max-width: 30px;
+    }
+    .alert-type-nav{
+        flex-grow: 0;
+        margin-left: 10%;
+    }
+        
+}
+
+.to-full-statistics button md-icon {
+    padding-left: 5px;
+}

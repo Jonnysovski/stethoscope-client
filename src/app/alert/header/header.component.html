@@ -7,8 +7,19 @@
         <h4>{{'there are currently no common system faults' | i18n}}</h4>
     </div>
 
-    <div class='goto-statistics-btn'>
-        <h5> {{'view statistics' | i18n}} </h5>
-        <a md-mini-fab color="primary"><md-icon>keyboard_arrow_left</md-icon></a>
+    <div class='view-statistics-btn'>
+        <div *ngIf="!viewStatistics">
+            <h5> {{'view statistics' | i18n}} </h5>
+            <a md-mini-fab color="primary" (click)="viewStatistics = true"><md-icon>keyboard_arrow_left</md-icon></a>
+        </div>
+        <div *ngIf="viewStatistics">
+            <h5> {{'close statistics' | i18n}} </h5>
+            <a md-mini-fab color="primary" (click)="viewStatistics = false"><md-icon>keyboard_arrow_down</md-icon></a>
+        </div>
     </div>
+    <!--<md-divider></md-divider>-->
+</div>
+
+<div class='simple-statistics' [class.isclosed]="!viewStatistics">
+    <home-statistics [viewStatistics]="viewStatistics"></home-statistics>
 </div>

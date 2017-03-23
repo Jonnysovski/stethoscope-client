@@ -14,7 +14,7 @@
     h4 {
         font-weight: bold;
     }
-    .goto-statistics-btn {
+    .view-statistics-btn {
         padding-top: 4px; 
         h5 {
             margin-left: 15px;
@@ -35,4 +35,14 @@
     } 
 } 
 
+.simple-statistics {
+    transition: 1s ease;
+    max-height: 450px;
+    opacity: 1;
+    overflow: hidden;
+}
 
+.simple-statistics.isclosed {
+    max-height: 0;
+    opacity: 0;
+}

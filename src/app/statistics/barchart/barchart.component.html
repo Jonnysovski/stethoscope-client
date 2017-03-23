@@ -1,0 +1,19 @@
+<h2>{{alertType | i18n}}</h2>
+<ngx-charts-pie-chart
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="data[alertType]"
+      [legend]="showLegend"
+      [explodeSlices]="explodeSlices"
+      [labels]="false"
+      [doughnut]="doughnut"
+      [arcWidth] = "0.35"
+      [gradient]="true"
+      (select)="onSelect($event)">
+    </ngx-charts-pie-chart>
+
+<!--<img class="type-icon" src="../../../assets/icons/system_large.png" style="
+    padding-top: 188px;
+    position: absolute;
+    margin-right: -249px;
+">-->
