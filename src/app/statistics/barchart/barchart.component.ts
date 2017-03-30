@@ -12,6 +12,7 @@ import {single, multi} from './data';
 export class BarchartComponent implements OnInit {
 
   @Input() alertType;
+  @Input() viewStatistics: boolean;
 
   single: any[];
   multi: any[];
