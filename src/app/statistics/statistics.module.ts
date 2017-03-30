@@ -10,6 +10,7 @@ import {NgxChartsModule} from '@swimlane/ngx-charts';
 import { StatisticsCounterComponent } from './counter/counter.component';
 import { HomeStatisticsComponent } from './home-statistics/home-statistics.component';
 import { BarchartComponent } from './barchart/barchart.component';
+import { StatisticsComponent } from './statistics/statistics.component';
 
 @NgModule({
     imports: [
@@ -22,12 +23,14 @@ import { BarchartComponent } from './barchart/barchart.component';
     exports: [
         StatisticsCounterComponent,
         HomeStatisticsComponent,
-        BarchartComponent
+        BarchartComponent,
+        StatisticsComponent
     ],
     declarations: [
         StatisticsCounterComponent,
         HomeStatisticsComponent,
-        BarchartComponent
+        BarchartComponent,
+        StatisticsComponent
     ],
     providers: [
 

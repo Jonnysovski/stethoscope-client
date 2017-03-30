@@ -47,10 +47,12 @@
             </md-list-item>
         </md-list>
     </div>
-    <app-barchart [alertType]="selectedType"></app-barchart>
+    <app-barchart [alertType]="selectedType" [viewStatistics]="viewStatistics" ></app-barchart>
     
 </div>
 <div class='to-full-statistics'>
     
-    <button md-button> <md-icon>insert_chart</md-icon> {{'Show full statistics' | i18n}}</button>
+    <button md-button routerLink="../statistics" routerLinkActive="active"> 
+        <md-icon>insert_chart</md-icon> {{'Show full statistics' | i18n}}
+    </button>
 </div>
