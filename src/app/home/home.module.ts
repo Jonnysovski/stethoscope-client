@@ -9,6 +9,9 @@ import { StatisticsModule } from '../statistics/statistics.module';
 /* Components */
 import { HomeComponent } from './home.component';
 
+/* Service */
+import { CommonService } from './common.service';
+
 @NgModule({
     imports: [
         CommonModule,
@@ -22,6 +25,8 @@ import { HomeComponent } from './home.component';
     declarations: [
         HomeComponent
     ],
-    providers: [],
+    providers: [
+        CommonService
+    ],
 })
 export class HomeModule { }
