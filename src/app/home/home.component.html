@@ -1,8 +1,8 @@
 <div class="page-view">
 	<div layout="row">
-		<statistics-counter flex grow="10" title="{{'total_active_devices'|i18n}}" amount="500" [lastUpdate]="date"></statistics-counter>
+		<statistics-counter flex grow="10" title="{{'total_active_devices'|i18n}}" [amount]="activeDevices" [lastUpdate]="date"></statistics-counter>
 		<div flex></div>
-		<statistics-counter flex grow="10" title="{{'total_critical_alerts'|i18n}}" amount="03" [lastUpdate]="date" type="alert"></statistics-counter>
+		<statistics-counter flex grow="10" title="{{'total_critical_alerts'|i18n}}" [amount]="serverNum" [lastUpdate]="date" type="alert"></statistics-counter>
 	</div>
 	<alerts></alerts>
 </div>

@@ -10,6 +10,9 @@ export class Alert {
     public comments: string;
     public group: Group;
     public host: Host;
+    public userName: string;
+    public lastConnectionDate: string;
+    public type: string;
 
 
 
