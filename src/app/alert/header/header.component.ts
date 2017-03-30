@@ -9,6 +9,8 @@ import { AlertService } from '../alert.service';
 })
 export class AlertHeaderComponent  { 
     public alerts: Alert[];
+    public viewStatistics: boolean = false;
+    
     constructor( private _alertService: AlertService) { }
 
     ngOnInit() {

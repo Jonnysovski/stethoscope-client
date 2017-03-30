@@ -1,0 +1,20 @@
+<h2>{{alertType | i18n}}</h2>
+<ngx-charts-pie-chart
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="data[alertType]"
+      [legend]="showLegend"
+      [explodeSlices]="explodeSlices"
+      [labels]="false"
+      [doughnut]="doughnut"
+      [arcWidth] = "0.35"
+      [gradient]="true"
+      (select)="onSelect($event)">
+    </ngx-charts-pie-chart>
+
+<img class="type-icon" *ngIf='alertType == "Application" '      src="../../../assets/icons/application_large.png">
+<img class="type-icon" *ngIf='alertType == "System" '           src="../../../assets/icons/system_large.png">
+<img class="type-icon" *ngIf='alertType == "Mail" '             src="../../../assets/icons/mail_large.png">
+<img class="type-icon" *ngIf='alertType == "Network drivers" '  src="../../../assets/icons/network_drivers_large.png">
+<img class="type-icon" *ngIf='alertType == "Connection" '       src="../../../assets/icons/network_large.png">
+<img class="type-icon" *ngIf='alertType == "Hardware" '         src="../../../assets/icons/hardware_large.png">

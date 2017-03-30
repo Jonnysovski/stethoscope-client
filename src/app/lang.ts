@@ -112,6 +112,38 @@ export default {
         'view statistics': {
             en: 'View statistics',
             he: 'לצפייה בנתונים הסטטיסטיים'
+        },
+        'close statistics': {
+            en: 'Close statistics',
+            he: 'סגירת הנתונים הסטטיסטיים'
+        },
+        'Application': {
+            en: 'Application',
+            he: 'אפליקטיבי'
+        },
+        'System': {
+            en: 'System',
+            he: 'מערכת'
+        },
+        'Mail': {
+            en: 'Mail',
+            he: 'מייל'
+        },
+        'Network drivers': {
+            en: 'Network drivers',
+            he: 'כונני רשת'
+        },
+        'Connection': {
+            en: 'Connection',
+            he: 'תקשורת'
+        },
+        'Hardware': {
+            en: 'Hardware',
+            he: 'חומרה'
+        },
+        'Show full statistics': {
+            en: 'Show full statistics',
+            he: 'לצפייה בכל הנתונים הסטטיסטיים'
         }
     }
 };

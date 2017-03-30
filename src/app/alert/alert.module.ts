@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 import { MaterialModule } from '@angular/material';
+import { StatisticsModule } from '../statistics/statistics.module';
 
 import { AlertService } from './alert.service';
 
@@ -17,7 +18,8 @@ import { AlertListFilterComponent } from './list/filter/filter.component';
         CommonModule,
         FormsModule,
         SharedModule,
-        MaterialModule
+        MaterialModule,
+        StatisticsModule
     ],
     exports: [
         AlertsComponent,
