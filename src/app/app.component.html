@@ -1,10 +1,13 @@
 <div class="demo-container" md-shadow="2">
 	<md-toolbar>
-		<img class="app-logo" src="assets/icons/Mod.png">
-		{{ clock | async | date:'dd.MM.yyyy , HH:mm' | i18n}}
-		<search-bar></search-bar>
-		<img src="assets/icons/lehava.png"> {{'open_lehava_incident' | i18n}}
-		<a class="navigation-link"><img src="assets/icons/logout.png"></a>
+		<!--<md-toolbar-row>-->
+			<div> <img class="app-logo" src="assets/icons/Mod.png"> {{ clock | async | date:'dd.MM.yyyy , HH:mm' | i18n}} </div>
+			<search-bar></search-bar>
+			<div>
+				<img src="assets/icons/lehava.png"> {{'open_lehava_incident' | i18n}} 
+				<a class="navigation-link"><img src="assets/icons/logout.png"></a>
+			</div>
+		<!--</md-toolbar-row>-->
 	</md-toolbar>
 	<div class="content">
 		<router-outlet></router-outlet>
