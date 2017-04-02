@@ -1,9 +1,10 @@
 <div class="list-container">
-	<alert-list-filter [isWorkstation]="isWorkstation"></alert-list-filter>
+	<alert-list-filter [isWorkstation]="isWorkstation" (onSearch)='onSearch($event)'></alert-list-filter>
 
 	<div class="table-container" layout="column">
 		<section class="table-header" layout="row">
-			<div class="header" flex grow="2"></div>
+			<div class="header is-sever"></div>
+			<div class="header type-icon" ></div>
 			<div class="header" flex grow="4">{{'incident_type' | i18n}}</div>
 			<div class="header" flex grow="3">{{'incident_number' | i18n}}</div>
 			<div class="header" flex grow="6">{{'computer_name' | i18n}}</div>
@@ -16,7 +17,8 @@
 		</section>
 		<section class="table-content" layout="column">
 			<div class="row" *ngFor="let alert of alerts" layout="row">
-				<div class="cell type-icon" flex grow="2">
+				<div class='cell is-sever'> <img *ngIf='alert.priority >= 4' class="severe-img" src="../../../assets/icons/warning.png"> </div>
+				<div class="cell type-icon" >
 					<div *ngIf='alert.type == "Application" ' >
 						<img src="../../../assets/icons/application.png">
 						<span> {{'Application'|i18n}} </span>

@@ -38,6 +38,10 @@
             .row {
                 .cell {
                     padding: ($padding - 2) 0;
+                    .severe-img {
+                        width: 15px;
+                        vertical-align: bottom;
+                    }
                 }
             }
 
@@ -54,4 +58,13 @@
             }
         }
     }
+}
+
+.type-icon {
+    width: 40px;
+}
+
+.is-sever {
+    min-width: 15px;
+    flex: 0;
 }

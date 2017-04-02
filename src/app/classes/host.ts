@@ -1,6 +1,6 @@
 export class Host {
-    public hostid: number;
-    public host: string;
+    public id: number;
+    public number: string;
     public available: number;
     public name: string;
 }

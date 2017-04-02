@@ -17,7 +17,16 @@ export class AlertListComponent implements OnInit {
         this._alertService.getAlerts().subscribe((alerts: Alert[]) => {
             this.alerts = alerts;
         }, (err) => {
-            console.error(err);
+            console.log(err);
+        });
+    }
+
+    onSearch(searchOn) {
+        console.log(searchOn);
+        this._alertService.getFilteredFaults(searchOn).subscribe((alerts: Alert[]) => {
+            this.alerts = alerts;
+        }, (err) => {
+            console.log(err);
         });
     }
 }
