@@ -34,3 +34,7 @@ testem.log
 Thumbs.db
 
 src/app-theme-old\.scss
+
+src/app/statistics/barchart/barchart\.service\.ts
+
+src/app/statistics/barchart/data\.ts
