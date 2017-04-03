@@ -10,7 +10,7 @@ import { Alert } from './alert';
 @Injectable()
 export class AlertService {
 
-    private _alertsUrl = 'http://localhost:3000/api/test';
+    private _alertsUrl = 'http://localhost:3000/api/faults';
     private _hostsUrl = 'http://localhost:3000/api/host'
 
 
@@ -22,10 +22,9 @@ export class AlertService {
             .map((res: Response) => {
                 let response = res.json();
                 response.forEach((item) => {
-                    item.group = item.groups[0];
-                    item.host = item.hosts[0];
+                    item.triggerid = item.id;
                     item.userName = item.currentUser;
-                    item.lastConnectionDate = item.lastLogin;
+                    item.lastConnectionDate = item.lastConnection;
                     item.lastchange = new Date(item.lastchange * 1000);
                 });
                 console.log(response);
@@ -41,5 +40,21 @@ export class AlertService {
                 console.log(response);
                 return response;
             }).catch((error: any) => Observable.throw(error.json().error || 'Server Error'));
+    }
+
+    getFilteredFaults(filter): Observable<any> {
+        return this._http.get(this._alertsUrl+'/filter/'+JSON.stringify(filter))
+            .map((res: Response) => {
+                let response = res.json();
+                response.forEach((item) => {
+                    item.triggerid = item.id;
+                    item.userName = item.currentUser;
+                    item.lastConnectionDate = item.lastConnection;
+                    item.lastchange = new Date(item.lastchange * 1000);
+                });
+                console.log(response);
+                return response;
+            })
+            .catch((error: any) => Observable.throw(error.json().error || 'Server Error'));
     }
 }

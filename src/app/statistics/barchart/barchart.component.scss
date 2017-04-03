@@ -14,17 +14,18 @@ ngx-charts-pie-chart {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   display: inline-block;
+  padding-top: 10px;
   
-  /deep/ .ngx-charts {
+  #{"/deep/"} .ngx-charts {
     float: right;
   }
 
-  /deep/ .legend-labels {
+  #{"/deep/"} .legend-labels {
     text-align: right;
     max-height: 355px;
     width: initial;
     float: right;
-    /deep/ .legend-lable-text {
+    #{"/deep/"} .legend-lable-text {
       padding-right: 5px;
     }
   }
@@ -35,8 +36,9 @@ h2 {
 }
 
 .type-icon{
-  position: absolute;
-  margin-top: 197px;
+  position: relative;
+  top: 171px;
   margin-right: -202px;
-  transform: translate(50%, -50%);
+  transform: translate(50%, 0%);
+  // Or -50% if position is absolute
 }

@@ -3,26 +3,26 @@
 	<section class="search-fields" layout="row" flexWrap="wrap">
 		<div class="search-input" *ngIf="!isWorkstation" flex="20" layout="column">
 			<label for="computer_name">{{'computer_name' | i18n}}</label>
-			<input id="computer_name" type="text" />
+			<input [(ngModel)]="computerName" id="computer_name" type="text" />
 		</div>
 		<div class="search-input" flex="20" layout="column">
 			<label for="username">{{'username' | i18n}}</label>
-			<input id="username" type="text" />
+			<input [(ngModel)]="userName" id="username" type="text" />
 		</div>
 		<div class="search-input" *ngIf="!isWorkstation" flex="20" layout="column">
 			<label for="ip_address">{{'ip_address' | i18n}}</label>
-			<input id="ip_address" type="text" />
+			<input [(ngModel)]="ipAdress" id="ip_address" type="text" />
 		</div>
 		<div class="search-input" *ngIf="!isWorkstation" flex="20" layout="column">
 			<label for="mac_address">{{'mac_address' | i18n}}</label>
-			<input id="mac_address" type="text" />
+			<input [(ngModel)]="macAdress" id="mac_address" type="text" />
 		</div>
 		<div class="search-input" flex="20" layout="column">
 			<label for="free_description">{{'free_description' | i18n}}</label>
-			<input id="free_description" type="text" />
+			<input [(ngModel)]="freeDesc" id="free_description" type="text" />
 		</div>
 
-		<button md-raised-button color="primary">
+		<button md-raised-button color="primary" (click)='search()'>
 			{{'search' | i18n}}
 		</button>
 	</section>

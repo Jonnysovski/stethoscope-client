@@ -4,30 +4,26 @@
     transform: scale(0.7);
 }
 
+md-toolbar #{"/deep/"} md-toolbar-row {
+    justify-content: space-between;
+}
+
 .content {
-    padding: 45px 15%;
-    height: 100vh;
+    min-height: 100vh;
     background: $layout-content-bg-color;
 }
 
 /* Large or below */
-@media (max-width: 1199px) {
+@media screen and (min-width: 700px) {
      .content {
         padding: 45px 10%;
     }
 }
 
-/* Medium or below */
-@media (max-width: 991px) {
-    .content {
-        padding: 45px 5%;
-    }
-}
-
-/* Small or below */
-@media (max-width: 767px) {
-    .content {
-        padding: 45px 2%;
+/* Large or below */
+@media screen and (min-width: 1500px) {
+     .content {
+        padding: 45px 15%;
     }
 }
 

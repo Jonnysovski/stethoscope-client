@@ -7,12 +7,13 @@ export class Alert {
     public description: string;
     public priority: number;
     public lastchange: number;
-    public comments: string;
-    public group: Group;
+    // public comments: string;
+    // public group: Group;
     public host: Host;
     public userName: string;
     public lastConnectionDate: string;
     public type: string;
+    public ip: string;
 
 
 
