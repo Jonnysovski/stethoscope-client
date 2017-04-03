@@ -13,16 +13,6 @@ md-toolbar #{"/deep/"} md-toolbar-row {
     background: $layout-content-bg-color;
 }
 
-
-/* Test */
-// @media screen and (max-width: 334520px) {
-//     .content {
-//         width: 100px;
-//         background-color: red;
-//     }
-//   }
-
-
 /* Large or below */
 @media screen and (min-width: 700px) {
      .content {
@@ -36,20 +26,6 @@ md-toolbar #{"/deep/"} md-toolbar-row {
         padding: 45px 15%;
     }
 }
-
-// /* Medium or below */
-// @media screen and (max-width: 991px) {
-//     .content {
-//         padding: 45px 5%;
-//     }
-// }
-
-// /* Small or below */
-// @media screen and (max-width: 767px) {
-//     .content {
-//         padding: 45px 2%;
-//     }
-// }
 
 search-bar {
     margin: auto;
