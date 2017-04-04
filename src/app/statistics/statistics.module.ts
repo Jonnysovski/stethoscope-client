@@ -18,7 +18,8 @@ import { StatisticsComponent } from './statistics/statistics.component';
         FormsModule,
         SharedModule,
         MaterialModule,
-        BrowserModule, NgxChartsModule 
+        BrowserModule,
+        NgxChartsModule 
     ],
     exports: [
         StatisticsCounterComponent,

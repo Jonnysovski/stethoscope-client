@@ -17,7 +17,7 @@ export class BarchartComponent implements OnInit {
   single: any[];
   multi: any[];
 
-  view: any[] = [400, 400];
+  view: any[] = [360, 360];
 
   // options
   showLegend = true;

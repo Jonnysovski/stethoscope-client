@@ -33,12 +33,13 @@ ngx-charts-pie-chart {
 
 h2 {
   position: absolute;
+  margin-top: 5px; 
 }
 
 .type-icon{
   position: relative;
-  top: 171px;
-  margin-right: -202px;
+  top: 149px;
+  margin-right: -213px;
   transform: translate(50%, 0%);
   // Or -50% if position is absolute
 }
